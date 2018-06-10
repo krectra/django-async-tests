@@ -1,6 +1,6 @@
 from django.db import models
 
 
-class AsyncTest(models.Model):
+class FetchData(models.Model):
 
-    myfield = models.CharField(max_length=255)
+    data = models.CharField(max_length=255)

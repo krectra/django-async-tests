@@ -6,5 +6,8 @@
     <body>
         <h1>Hello world</h1>
         {{ request }}<br>
+        {% if fetch_data %}
+        Latest fetch data: {{ fetch_data.data }}
+        {% endif %}
     </body>
 </html>

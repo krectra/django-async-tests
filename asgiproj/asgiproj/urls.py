@@ -1,9 +1,10 @@
 from django.urls import path
 
-from asgiapp.views import TestView
+from asgiapp.views import SleepView, FetchView
 
 
 urlpatterns = [
-    path('test/', TestView.as_view()),
+    path('sleep/', SleepView.as_view()),
+    path('fetch/', FetchView.as_view()),
 
 ]
