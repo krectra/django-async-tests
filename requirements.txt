@@ -1,0 +1,3 @@
+-e git://github.com/erm/django.git@asgic#egg=django
+gunicorn
+uvicorn
