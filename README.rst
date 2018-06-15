@@ -1,12 +1,12 @@
 django-async-tests
 ==================
 
-Test project for testing against the experimental ``asyncio`` support in https://github.com/erm/django/tree/asgi/. 
+Django project for testing against the experimental ``asyncio/ASGI`` support in https://github.com/erm/django/tree/asgi/. 
 
 Testing
 -------
 
-- Install the requirements in `requirements.txt`
+- Install the requirements in ``requirements.txt``
 
 ASGI
 ++++
