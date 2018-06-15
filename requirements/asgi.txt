@@ -1,3 +1,2 @@
 -e git://github.com/erm/django.git@async#egg=django
 uvicorn
-aiohttp

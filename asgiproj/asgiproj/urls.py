@@ -1,10 +1,6 @@
 from django.urls import path
 
-from asgiapp.views import SleepView, FetchView
+from asgiapp.views import IndexView
 
 
-urlpatterns = [
-    path('sleep/', SleepView.as_view()),
-    path('fetch/', FetchView.as_view()),
-
-]
+urlpatterns = [path("test/", IndexView.as_view())]
