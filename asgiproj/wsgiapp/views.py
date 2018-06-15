@@ -2,7 +2,7 @@ from django.views.generic import View
 from django.http import HttpResponse
 
 
-class ASGIView(View):
+class WSGIView(View):
 
-    async def get(self, request, *args, **kwargs):
+    def get(self, request, *args, **kwargs):
         return HttpResponse('Hello world.')

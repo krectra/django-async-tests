@@ -9,7 +9,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-INSTALLED_APPS = ["asgiapp"]
+INSTALLED_APPS = ["asgiapp", "wsgiapp"]
 
 MIDDLEWARE = []
 

@@ -1,6 +1,7 @@
 from django.urls import path
 
-from asgiapp.views import IndexView
+from asgiapp.views import ASGIView
+from wsgiapp.views import WSGIView
 
 
-urlpatterns = [path("test/", IndexView.as_view())]
+urlpatterns = [path("asgi/", ASGIView.as_view()), path("wsgi/", WSGIView.as_view())]
