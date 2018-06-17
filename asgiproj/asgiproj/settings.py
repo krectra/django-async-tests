@@ -16,3 +16,5 @@ MIDDLEWARE = []
 ROOT_URLCONF = "asgiproj.urls"
 
 ASGI_APPLICATION = "asgiproj.asgi.application"
+
+EXTERNAL_REQUEST_URL = '127.0.0.1:8080'

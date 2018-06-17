@@ -2,19 +2,21 @@ import aiohttp
 
 from django.views.generic import AsyncView
 from django.http import HttpResponse
+from django.conf import settings
 
 
 class ASGIView(AsyncView):
 
     async def get(self, request, *args, **kwargs):
-        return HttpResponse("Hello world.")
+        return HttpResponse("Hello, World!")
 
 
-class ASGIFetchView(AsyncView):
+async def asgi_plaintext(request):
+    return HttpResponse("Hello, World!", content_type="text/plain")
 
-    async def get(self, request, *args, **kwargs):
-        # TODO: This doesn't get properly cleaned up atm, need to fix in the fork's ASGI handler or the HttpResponse
-        async with aiohttp.ClientSession() as session:
-            async with session.get("https://now.httpbin.org/") as response:
-                response_text = await response.text()
+
+async def asgi_fetch(request):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(settings.EXTERNAL_REQUEST_URL) as response:
+            response_text = await response.text()
         return HttpResponse(response_text)

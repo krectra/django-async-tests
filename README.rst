@@ -11,20 +11,34 @@ Testing
 ASGI
 ++++
 
-- Run the application with ASGI server:
-
 .. code::
     
     $ uvicorn asgiproj.asgi:application
 
+.. code::
+    
+    $ daphne asgiproj.asgi:application
+
+.. code::
+    
+    $ hypercorn asgiproj.asgi:application
+
+.. code::
+    
+    $ hypercorn asgiproj.asgi:application --uvloop
+
+
 WSGI
 ++++
-
-- Run the application with WSGI server:
 
 .. code::
     
     $ gunicorn asgiproj.wsgi:application
+
+.. code::
+    
+    $ gunicorn --worker-class="egg:meinheld#gunicorn_worker" asgiproj.wsgi:application
+
 
 Reference
 =========

@@ -1,5 +1,6 @@
--e git://github.com/erm/django.git@asgic#egg=django
+-e git://github.com/erm/django.git@asgi#egg=django
 gunicorn
 uvicorn
+meinheld
 aiohttp
 requests
